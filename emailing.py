@@ -7,6 +7,7 @@ PASSWORD = 'avreucjhpvkjfhqa'
 RECEIVER = "andrescardenas280@gmail.com"
 
 def send_email(image_path, receiver=RECEIVER):
+    print("send_email function started")
     email_message = EmailMessage()
     email_message["Subject"] = "Motion Detected"
     email_message.set_content("Here is the object detected.")
@@ -23,6 +24,8 @@ def send_email(image_path, receiver=RECEIVER):
     gmail.sendmail(SENDER, receiver, email_message.as_string())
     gmail.quit()
     print("Email sent!")
+    print("send_email function ended")
+
 
 if __name__ == "__main__":
     send_email(image_path="images/1.png")
