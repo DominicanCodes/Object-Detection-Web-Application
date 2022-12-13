@@ -53,7 +53,7 @@ while True:
             send_email(image_with_object)
             clean_folder()
 
-    cv2.imshow("My video", dil_frame)
+    cv2.imshow("My video", frame)
 
     key = cv2.waitKey(1)
     if key == ord("q"):
